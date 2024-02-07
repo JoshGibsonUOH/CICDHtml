@@ -1,8 +1,9 @@
 name: Pushing to GitHub Pages
+
 on:
- push:
-  branches:
-    -main
+  push:
+    branches:
+      - main
 
 jobs:
  build:
