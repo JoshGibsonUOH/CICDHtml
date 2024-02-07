@@ -7,13 +7,16 @@ on:
 
 jobs:
   # Build job
-  build:
-    runs-on: ubuntu-latest
+ # build:
+    # <Not provided for brevity>
+    # At a minimum this job should upload artifacts using actions/upload-pages-artifact
 
   # Deploy job
-  deploy:
+   deploy:
     # Add a dependency to the build job
-    needs: build
+   # needs: build
+
+   
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
@@ -28,10 +31,8 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
-
-
-
-
