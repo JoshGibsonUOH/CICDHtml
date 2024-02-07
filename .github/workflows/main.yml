@@ -15,7 +15,7 @@ jobs:
   - name: Deploy
     uses: JamesIves/github-pages-deploy-action@v4
     with:
-          folder: /home/runner/work/CICDHtml/CICDHtml
+          folder: /home/runner/work/CICDHtml
 
 
 
